@@ -2,7 +2,10 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    background-color: brown;
+}
+
+body{
+     background-color: brown;
 }
 
 .icon::before {
@@ -57,4 +60,36 @@
 
 .playground span{
     display: inline-block;
+}
+
+.slider img{
+    width: 500px;
+    height: 300px;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    display: none;
+}
+
+.slider img.active{
+    display: inline-block;
+}
+
+.prev, .next{
+    margin-top: 30px;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.prev{
+    position: relative;
+    margin-right: -45px;
+    z-index: 100;
+    
+}
+
+.next{
+    position: relative;
+    margin-left: -45px;
+    z-index: 100;
 }
