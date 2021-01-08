@@ -132,6 +132,7 @@ function attivaSlider(){
         }
     });
 
+    // link numero pagina e immagini
     $('.circles').click(function (e) { 
         e.preventDefault();
 
@@ -151,6 +152,9 @@ function attivaSlider(){
             .addClass('active') 
             .siblings('.circles')
             .removeClass('active')
+
+        console.log($('img.active').attr('src'))
             
     });
+
 }
