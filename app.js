@@ -131,4 +131,26 @@ function attivaSlider(){
             prevImage()
         }
     });
+
+    $('.circles').click(function (e) { 
+        e.preventDefault();
+
+        var num = parseInt( $(e.target).attr('value'))
+        console.log(typeof(num)+num)
+
+        $('img')
+            .eq(num)
+            .addClass('active')
+            .siblings('img')
+            .removeClass('active')
+            
+            // console.log('ramo true')
+
+        $('#circle .circles')
+            .eq(num)
+            .addClass('active') 
+            .siblings('.circles')
+            .removeClass('active')
+            
+    });
 }
