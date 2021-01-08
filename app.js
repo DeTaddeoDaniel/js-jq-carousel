@@ -3,12 +3,15 @@ $(document).ready(function () {
     autoplay()
 });
 
+// dopo ogni cambio immagine aspetta n secondi
+var timeAutoplay = 10000;
+
 function autoplay(){
 
-    setInterval( () =>{
+    setTimeout( () =>{
         console.log('- autoplay next')
         nextImage()
-    }, 10000 )
+    }, timeAutoplay )
 }
 
 function nextImage(){
@@ -36,6 +39,8 @@ function nextImage(){
     }
 
     console.log($('img.active').attr('src'))
+
+    setTimeout(nextImage, timeAutoplay)
         
 }
 
@@ -71,16 +76,34 @@ function attivaSlider(){
     console.log('attiva slider')
     console.log($('.slider img.active').attr('src'))
     
+    // click sui pulsante next
     console.log('active arrow right')
     $('#right').click( () => {
         console.log('- pulsante prev premuto')
         nextImage()
     })
 
+    // click sul pulsante prev
     console.log('active arrow left')
     $('#left').click( () => {
         console.log(' - pulsante next premuto')
         prevImage()
     })
 
+    // pressione click su keyboard arrow left e right
+    console.log('attiva pulsanti frecce')
+    $('body').keydown(function (e) { 
+        
+        // key -> and key A
+        console.log('pulsante premuto: '+e.keyCode)
+        if(e.keyCode == 39 || Element.keyCode == 68 ){
+            console.log('- pulsante key array right')
+            nextImage()
+
+        // key <- and key D
+        } else if(e.keyCode == 37  || Element.keyCode == 65){
+            console.log('- pulsante key array left')
+            prevImage()
+        }
+    });
 }

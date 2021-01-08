@@ -13,6 +13,11 @@ img.active{
     display: block;
 }
 
+.funzionalita{
+    display: flex;
+    justify-content: space-around;
+}
+
 .slider{
     height: 480px;
     display: flex;
