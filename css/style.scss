@@ -22,10 +22,40 @@ img.active{
     height: 480px;
     display: flex;
     align-items: center;
+    position: relative;
 
     &-left, &-right{
         padding: 10px;
         font-size: 30px;
         cursor: pointer;
     }
+}
+
+#circle{
+    position: absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pagesCircle{
+    background-color: crimson;
+    display: flex;
+    flex-direction: row;
+    padding: 5px 10px;
+    padding-left: 0;
+    border-radius: 20px;
+
+}
+
+.circles{
+    height: 15px;
+    width:  15px;
+    border-radius: 100%;
+    margin-left: 10px;
+    background-color: skyblue;
+}
+
+.circles.active{
+    background-color: slateblue;
 }

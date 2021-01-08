@@ -26,6 +26,11 @@ function nextImage(){
             
             // console.log('ramo true')
 
+        $('.pagesCircle .circles.active')
+            .removeClass('active')
+            .next()
+            .addClass('active')
+
     } else {
 
         $('img.active')
@@ -33,6 +38,13 @@ function nextImage(){
 
         $('.slider')
             .find('img.first')
+            .addClass('active')
+
+        $('#circle .circles.active')
+            .removeClass('active')
+
+        $('#circle')
+            .find('.circles.first')
             .addClass('active')
         
         // console.log('ramo true')
@@ -54,6 +66,12 @@ function prevImage(){
                 .siblings('img')
                 .removeClass('active')
 
+            $('.pagesCircle .circles.active')
+                .removeClass('active')
+                .prev()
+                .addClass('active')
+        
+
             // console.log('ramo true')
 
         } else {
@@ -63,6 +81,13 @@ function prevImage(){
 
             $('.slider')
                 .find('img.last')
+                .addClass('active')
+
+            $('#circle .circles.active')
+            .removeClass('active')
+
+            $('#circle')
+                .find('.circles.last')
                 .addClass('active')
 
             // console.log('ramo true')

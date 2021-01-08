@@ -30,11 +30,46 @@ img.active {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  position: relative;
 }
 
 .slider-left, .slider-right {
   padding: 10px;
   font-size: 30px;
   cursor: pointer;
+}
+
+#circle {
+  position: absolute;
+  bottom: 50px;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+.pagesCircle {
+  background-color: crimson;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  padding: 5px 10px;
+  padding-left: 0;
+  border-radius: 20px;
+}
+
+.circles {
+  height: 15px;
+  width: 15px;
+  border-radius: 100%;
+  margin-left: 10px;
+  background-color: skyblue;
+}
+
+.circles.active {
+  background-color: slateblue;
 }
 /*# sourceMappingURL=style.css.map */
