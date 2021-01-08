@@ -1,0 +1,26 @@
+body{
+    background-color: peru;
+}
+
+img{
+    width: 100%;
+    display: none;
+    height: 400px;
+    object-fit: contain;
+}
+
+img.active{
+    display: block;
+}
+
+.slider{
+    height: 480px;
+    display: flex;
+    align-items: center;
+
+    &-left, &-right{
+        padding: 10px;
+        font-size: 30px;
+        cursor: pointer;
+    }
+}
